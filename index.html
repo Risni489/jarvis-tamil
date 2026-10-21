@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Tamil personal AI assistant inspired by futuristic voice assistants.">
+  <title>JARVIS • Tamil AI</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">J</div>
+      <div><div class="eyebrow">PERSONAL AI SYSTEM</div><h1>JARVIS <span>தமிழ்</span></h1></div>
+      <div class="status"><i></i><span id="statusText">READY</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <button id="voiceButton" class="core" aria-label="குரல் மூலம் பேசு">
+          <span class="core-ring"></span><span class="core-symbol">J</span><span class="core-label">TAP TO SPEAK</span>
+        </button>
+        <div class="hero-caption"><span class="pulse-dot"></span><span id="heroStatus">உன் கட்டளைக்காகக் காத்திருக்கிறேன்</span></div>
+      </section>
+
+      <section class="quick-actions" aria-label="விரைவு செயல்கள்">
+        <button class="quick" data-prompt="வணக்கம் JARVIS! உன்னை அறிமுகப்படுத்திக்கொள்."><b>✦</b><span>அறிமுகம்</span></button>
+        <button class="quick" data-prompt="இன்றைய நாளுக்கான ஒரு நல்ல திட்டத்தை உருவாக்கு."><b>◷</b><span>திட்டமிடு</span></button>
+        <button class="quick" data-prompt="எனக்கு ஒரு புதிய திறனைக் கற்றுக்கொள்ள உதவு."><b>⌘</b><span>கற்றுக்கொள்</span></button>
+        <button class="quick" id="openYoutube"><b>▶</b><span>YouTube</span></button>
+      </section>
+
+      <section class="chat-panel">
+        <div class="section-heading"><div><span class="eyebrow">LIVE CONVERSATION</span><h2>உரையாடல்</h2></div><button id="clearChat" class="text-button">அழி ↺</button></div>
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant"><div class="avatar">J</div><div class="bubble"><div class="speaker">JARVIS</div><p>வணக்கம்! நான் உன்னுடைய தமிழ் AI உதவியாளர். கீழே தட்டச்சு செய்யலாம் அல்லது மைக் பொத்தானை அழுத்திப் பேசலாம்.</p></div></article>
+        </div>
+        <form id="chatForm" class="composer">
+          <input id="messageInput" autocomplete="off" placeholder="JARVIS-க்கு ஒரு செய்தி அனுப்பு..." aria-label="உன் செய்தி">
+          <button class="send-button" type="submit" aria-label="அனுப்பு">➤</button>
+        </form>
+        <p class="hint">Enter = அனுப்பு · குரல் வசதிக்கு microphone permission தேவை</p>
+      </section>
+
+      <section class="tools-panel">
+        <div class="section-heading"><div><span class="eyebrow">SYSTEM TOOLS</span><h2>விரைவு கருவிகள்</h2></div></div>
+        <div class="tool-grid">
+          <button class="tool-card" id="openSettings"><span>⚙</span><b>Settings</b><small>மொபைல் அமைப்புகள்</small></button>
+          <button class="tool-card" id="openMaps"><span>⌖</span><b>Maps</b><small>இடங்களைத் தேடு</small></button>
+          <button class="tool-card" id="openSearch"><span>⌕</span><b>Web Search</b><small>இணையத் தேடல்</small></button>
+          <button class="tool-card" id="memoryButton"><span>◈</span><b>Memory</b><small>சேமித்த தகவல்கள்</small></button>
+        </div>
+      </section>
+    </main>
+    <footer>JARVIS TAMIL · PERSONAL ASSISTANT <span>v1.0</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

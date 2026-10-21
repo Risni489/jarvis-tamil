@@ -1,0 +1,10 @@
+{
+  "name": "JARVIS Tamil Personal AI",
+  "short_name": "JARVIS Tamil",
+  "description": "Tamil voice assistant starter app",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050a12",
+  "theme_color": "#07111f",
+  "lang": "ta"
+}
