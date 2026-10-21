@@ -3,7 +3,7 @@
  Optional AI backend: deploy worker.js and set API_BASE below.
  Without backend, built-in demo replies, browser speech recognition, TTS, local memory and shortcuts still work.
 */
-const API_BASE = "https://jarvis-tamil.nasarmohamedrisni.workers.dev";"
+const API_BASE = "https://jarvis-tamil.nasarmohamedrisni.workers.dev";
 const $ = (id) => document.getElementById(id);
 const messagesEl = $("messages");
 const input = $("messageInput");
